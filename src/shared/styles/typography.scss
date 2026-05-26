@@ -1,0 +1,5 @@
+@mixin font-primary($weight: 400) {
+  font-family: "Open Sans", sans-serif;
+  font-weight: $weight;
+  line-height: 1.2;
+}
