@@ -1,18 +1,21 @@
+import Logo from '@shared/assets/icons/icon-logo.svg?react';
+import s from './auth.module.scss'
+import {PageWrapper} from "@shared/components";
 
-import Logo from '@/assets/icon-logo.svg?react';
-import {Typography} from "../../shared/components";
-
-export const AuthPage = () => {
+const AuthPage = () => {
     return(
-        <main className="authPage">
-            <Logo className="logo" />
-            <Typography
-                tag="h1"
-                variant="sub-heading"
-                color="light-gray"
-            >
-                Все ваши заказы в одном приложении
-            </Typography>
-        </main>
+        <PageWrapper>
+            <main className="authPage">
+                <header>
+                    <Logo className={s.logo} />
+                </header>
+
+                <h1>
+                    Все ваши заказы в одном месте!
+                </h1>
+            </main>
+        </PageWrapper>
     )
 }
+
+export default AuthPage;

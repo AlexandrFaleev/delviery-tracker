@@ -1,5 +1,4 @@
-@mixin flex-center {
-  display: flex;
+@mixin centralize-by-all {
   align-items: start;
   justify-content: center;
 }

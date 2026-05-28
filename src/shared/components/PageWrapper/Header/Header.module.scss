@@ -1,0 +1,91 @@
+@use "@styles" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding: 25px 88px;
+  box-shadow: 0 5px 100px 10px rgba(0, 0, 0, 0.25);
+
+  &__logo {
+    display: block;
+    text-decoration: none;
+    color: $light-violet;
+    &:visited {
+      color: $light-violet;
+    }
+
+    &-icon {
+      display: block;
+      width: 270px;
+      height: 48px;
+
+      path:nth-child(1) {
+        color: $dark-violet;
+      }
+
+      path:nth-child(2) {
+        color: $light-violet;
+      }
+
+      path:nth-child(3) {
+        color: $white;
+      }
+    }
+  }
+}
+
+.logo {
+
+}
+
+.nav-bar {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    &-item {
+      display: block;
+      width: 55px;
+      height: 40px;
+
+      a{
+        display: block;
+        width: inherit;
+        height: inherit;
+        color: $light-violet;
+
+        &:visited {
+          color: $light-violet;
+        }
+
+        &.disabled {
+          color: $gray;
+          pointer-events: none;
+          cursor: default;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        svg {
+          display: block;
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
+}
+
+.chat-icon {
+  path:not(:nth-child(1)) {
+    fill: $white;
+  }
+}

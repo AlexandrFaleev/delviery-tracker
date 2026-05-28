@@ -10,7 +10,8 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, './src'),
       "@shared": path.resolve(__dirname, './src/shared'),
-      "@styles": path.resolve(__dirname, './src/shared/styles')
+      "@styles": path.resolve(__dirname, './src/shared/styles'),
+      "@pages": path.resolve(__dirname, './src/pages'),
     }
   }
 })

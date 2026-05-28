@@ -1,11 +1,8 @@
-import {AuthPage} from "../pages/auth/auth.tsx";
-
 import './styles/globals.scss'
+import {RouterProvider} from './providers'
 function App() {
 
-  return (
-      <AuthPage/>
-  )
+  return <RouterProvider/>
 }
 
 export default App

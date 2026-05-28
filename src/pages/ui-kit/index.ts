@@ -1,0 +1,1 @@
+export {default as UiKit} from './ui-kit';

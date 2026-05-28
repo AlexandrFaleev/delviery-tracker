@@ -1,0 +1,9 @@
+@use "@styles" as *;
+
+.logo {
+  color: $light-violet;
+
+  path:nth-child(3) {
+    color: $white;
+  }
+}

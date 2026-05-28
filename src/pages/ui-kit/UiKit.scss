@@ -1,0 +1,10 @@
+@use "@styles" as *;
+
+.ui-kit {
+  width: 100%;
+  max-width: 1156px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
