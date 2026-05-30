@@ -1,9 +1,46 @@
 @use "@styles" as *;
 
 .logo {
+  display: block;
   color: $light-violet;
+  width: fluid(300, 240);
+  margin: 0 auto;
+  margin-top: 141px;
 
   path:nth-child(3) {
     color: $white;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 674px;
+  margin: 0 auto;
+  margin-top: fluid(120, 40);
+}
+
+.heading {
+  @include font-primary(400);
+
+  display: block;
+  max-width: 302px;
+  font-size: rem(22);
+  letter-spacing: 0.07em;
+  color: $light-gray;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 355px;
+    margin-top: 40px;
+  }
+
+  .heading {
+    font-size: rem(18);
+    width: 100%;
+    max-width: 231px;
+    text-wrap: wrap;
+    margin-left: 26px;
   }
 }

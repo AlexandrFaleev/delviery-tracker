@@ -1,11 +1,25 @@
 @use "@styles" as *;
 
+html, body {
+  /*overflow: hidden;*/
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 body {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: $main-color;
   font-family: 'Open Sans', sans-serif;
 }
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 
 input,
 label,

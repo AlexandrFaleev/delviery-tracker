@@ -1,6 +1,7 @@
 import {Header} from "@shared/components/PageWrapper/Header";
-import {useMediaQuery} from 'react-responsive'
-
+import {Footer} from "@shared/components/PageWrapper/Footer";
+import {useMediaQuery} from 'react-responsive';
+import s from './PageWrapper.module.scss';
 
 const PageWrapper = ({children}:React.PropsWithChildren) => {
     const deviceType:string = useMediaQuery({query: 'screen and (max-width: 768px)'})
@@ -9,7 +10,10 @@ const PageWrapper = ({children}:React.PropsWithChildren) => {
     return (
         <>
             <Header type={deviceType}/>
-            {children}
+                <div className={s.main}>
+                    {children}
+                </div>
+            <Footer type={deviceType}/>
         </>
     )
 }

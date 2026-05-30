@@ -1,0 +1,46 @@
+@use "@styles" as *;
+
+.field {
+  width: 100%;
+  position: relative;
+
+  &:has(.field__input:not(:placeholder-shown)) .field__label {
+    translate: -0.7em -3.5em;
+  }
+}
+
+.field__label {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  translate: 0 -50%;
+  width: 200px;
+
+  @include font-secondary(400);
+  font-size: rem(16);
+  color: $alter-gray;
+}
+
+.field__input {
+  width: 100%;
+  padding-inline: 10px;
+  height: 50px;
+  border: 1px solid $max-light-gray;
+  border-radius: 5px;
+
+  @include font-secondary(500);
+  font-size: rem(16);
+
+  &[type="password"] {
+    font-size: rem(26);
+  }
+
+  &.invalid {
+    border-color: $light-red;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $light-violet;
+  }
+}

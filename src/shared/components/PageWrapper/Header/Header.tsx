@@ -12,7 +12,7 @@ type HeaderProps = {
     type: string
 }
 
-const Header: React.FunctionComponent = ({type = "desktop"}: HeaderProps) => {
+const Header = ({type = "desktop"}: HeaderProps): React.JSX.Element => {
     const currentLocation = useLocation().pathname;
     const chatClass: string = currentLocation === '/chat' ||
         currentLocation === '/login' ? s.disabled : "";

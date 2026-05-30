@@ -1,0 +1,49 @@
+@use "@styles" as *;
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 674px;
+  padding: 90px 67px 41px 67px;
+  background-color: $white;
+  border-radius: 20px;
+  margin-top: fluid(50, 20);
+}
+
+.pass-field {
+  margin-top: 60px;
+}
+
+.auth-button {
+  max-width: 140px;
+  max-height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: rem(20);
+  margin: 0 auto;
+  margin-top: 50px;
+
+}
+
+.registration {
+  @include font-secondary(300);
+
+
+  text-decoration: none;
+  font-size: rem(18);
+  color: $light-violet;
+  transition-duration: 0.2s;
+  margin: 0 auto;
+  margin-top: 25px;
+
+  &:hover {
+    color: $dark-violet;
+  }
+
+  &:visited {
+    color: $light-violet;
+  }
+}
