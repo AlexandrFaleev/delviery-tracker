@@ -37,10 +37,12 @@
 
   &.invalid {
     border-color: $light-red;
+    border-width: 2px;
   }
 
   &:focus {
     outline: none;
+    border-width: 2px;
     border-color: $light-violet;
   }
 }

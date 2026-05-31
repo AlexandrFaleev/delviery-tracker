@@ -61,7 +61,7 @@ const Footer = ({type}:FooterProps): React.JSX.Element => {
             ) : (
                 <>
                     <div className={s[`footer__company-name`]}>
-                        © 2025, «Где Посылка?»
+                        © 2026, «Где Посылка?»
                     </div>
                     <div className={clsx(s[`footer__company-info`], s[`company-info`])}>
                         <ul className={s[`company-info__list`]}>

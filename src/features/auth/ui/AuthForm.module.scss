@@ -55,3 +55,32 @@
     padding: 90px 67px 41px 67px;
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .auth-form {
+    max-width: 500px;
+    padding: 40px;
+    padding-top: 60px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .auth-button {
+    max-width: 120px;
+    max-height: 50px;
+    font-size: rem(18);
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .auth-form {
+    padding: 0 20px;
+    padding-top: 49px;
+    padding-bottom: 30px;
+  }
+
+  .pass-field {
+    margin-top: 49px;
+  }
+}

@@ -1,8 +1,14 @@
 import './styles/globals.scss'
 import {RouterProvider} from './providers'
+import {UserProvider} from "@/entities/user";
 function App() {
 
-  return <RouterProvider/>
+  return (
+      <UserProvider>
+        <RouterProvider/>
+      </UserProvider>
+  )
+
 }
 
 export default App

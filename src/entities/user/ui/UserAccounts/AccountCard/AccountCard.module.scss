@@ -1,0 +1,84 @@
+@use "@styles" as *;
+
+.account-card {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  padding: 27px 18px;
+  border-radius: 20px;
+
+  &__image {
+    width: 60px;
+  }
+
+  &__phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-white;
+    color: $light-light-gray;
+    @include font-secondary(400);
+    font-size: rem(18);
+    padding: 10px 20px;
+    border-radius: 10px;
+    letter-spacing: 0.09em;
+    margin-left: 52px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    column-gap: 20px;
+  }
+}
+
+.correction-button,
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  padding: 11.5px;
+}
+
+.delete-button {
+  border-color: $red;
+  color: $red;
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .account-card {
+    padding: 7px 20px;
+    min-height: 58px;
+
+    &__image {
+      width: 44px;
+    }
+
+    &__phone {
+      font-size: rem(14);
+      padding: 5px 10px;
+      margin-left: 21px;
+    }
+
+    &__controls {
+      column-gap: 10px;
+    }
+  }
+
+  .correction-button,
+  .delete-button {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+}

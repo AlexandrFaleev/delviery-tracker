@@ -1,1 +1,2 @@
-export {AuthButton} from './auth/ui'
+export {AuthForm} from './auth/ui'
+export {FiltersBlock} from './filters/ui'

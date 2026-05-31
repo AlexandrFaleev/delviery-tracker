@@ -16,7 +16,7 @@
   width: 100%;
   max-width: 674px;
   margin: 0 auto;
-  margin-top: fluid(120, 40);
+  margin-top: fluid(90, 30);
 }
 
 .heading {
@@ -28,6 +28,18 @@
   letter-spacing: 0.07em;
   color: $light-gray;
   margin-left: 15px;
+}
+
+@media screen and (min-width: 1439px) {
+  .container {
+    margin-top: 141px;
+  }
+}
+
+@media screen and (max-height: 1010px) {
+  .container {
+    margin-top: 70px;
+  }
 }
 
 @media screen and (max-width: 768px) {

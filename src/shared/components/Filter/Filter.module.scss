@@ -1,0 +1,21 @@
+@use "@styles" as *;
+
+.filter-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include font-secondary(300);
+  font-size: rem(14);
+  color: $light-gray;
+  line-height: 1em;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 10px;
+  background-color: $dirt-white;
+
+  &.selected,
+  &:hover{
+    background-color: $light-violet;
+    color: $white;
+  }
+}

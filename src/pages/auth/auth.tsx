@@ -1,8 +1,8 @@
 import LogoIcon from '@/shared/assets/icons/icon-logo.svg?react';
 import {PageWrapper} from "@shared/components";
 import {useMediaQuery} from "react-responsive";
-import s from './auth.module.scss'
-import {AuthForm} from "@/widgets";
+import s from './auth.module.scss';
+import {AuthForm} from "@/features";
 
 const AuthPage = () => {
     const deviceType:string = useMediaQuery({query: 'screen and (max-width: 768px)'})

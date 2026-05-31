@@ -1,0 +1,90 @@
+@use "@styles" as *;
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: start;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.heading {
+  @include font-primary(700);
+
+  font-size: rem(32);
+  color: $max-dark-violet;
+  width: 100%;
+  text-align: center;
+}
+
+.back-url {
+  @include font-primary(700);
+  font-size: rem(22);
+  display: block;
+  color: $light-gray;
+  text-decoration: none;;
+
+  &:visited{
+    color: $light-gray;
+  }
+}
+
+.user-info {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.user-accounts {
+  width: 100%;
+  margin-left: 185px;
+}
+
+@media screen and (max-height: 1000px) {
+  .header {
+    margin-top: 40px;
+  }
+
+  .user-info {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .heading {
+    font-size: rem(28);
+  }
+
+  .back-url {
+    font-size: rem(18);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
+
+  .back-url {
+    margin-top: 27px;
+  }
+
+  .user-info {
+    flex-direction: column;
+  }
+
+  .user-accounts {
+    margin-left: 0;
+  }
+}

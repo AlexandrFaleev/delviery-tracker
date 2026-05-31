@@ -1,0 +1,112 @@
+@use "@styles" as *;
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 21px 15px 94px 15px;
+  border-radius: 20px;
+}
+
+.correction-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  padding: 11.5px;
+  margin-left: auto;
+}
+
+.user-avatar {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-top: -23px;
+}
+
+.change-photo-btn {
+  @include font-secondary(300);
+
+  background-color: transparent;
+  color:$light-violet;
+  font-size: rem(18);
+  padding: 0;
+  border: none;
+  margin-top: 15px;
+}
+
+.divider {
+  width: 325px;
+  height: 2px;
+  background-color: $max-light-gray;
+  margin-top: 14px;
+}
+
+.user-info {
+  margin-top: 74px;
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 15px;
+  column-gap: 30px;
+  padding-left: 15px;
+
+  @include font-secondary(400);
+  font-size: rem(18);
+  color: #797373;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .user-card {
+    padding: 15px 10px 40px 10px;
+  }
+
+  .correction-button {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+  }
+
+  .user-avatar {
+    width: 80px;
+    height: 80px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .user-card {
+    padding: 6px 16px 30px 14px;
+  }
+
+  .correction-button {
+    border-radius: 5px;
+  }
+
+  .user-avatar {
+    width: 83px;
+    height: 83px;
+  }
+
+  .change-photo-btn {
+    font-size: rem(14);
+  }
+
+  .divider {
+    width: 325px;
+    margin-top: 15px;
+  }
+
+  .user-info {
+    font-size: rem(16);
+    line-height: rem(14);
+    row-gap: 9px;
+    margin-top: 15px;
+  }
+}

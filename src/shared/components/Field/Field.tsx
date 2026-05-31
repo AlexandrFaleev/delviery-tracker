@@ -1,27 +1,36 @@
-import s from './Field.module.scss'
+import * as React from 'react'
 import clsx from "clsx";
+import s from './Field.module.scss'
 
 type FieldProps = {
     id:string,
     type?:string,
     title:string,
-    className?:string
+    valid:boolean
+    className?:string,
+    value:string,
+    onInputChange: (value:string) => void,
 }
 
 const Field = ({
    id,
    type="text",
    title,
-   className
+   valid,
+   className,
+   value,
+   onInputChange
 }: FieldProps): React.JSX.Element => {
     return (
         <div className={clsx(s.field, className)}>
             <input
                 id={id}
                 type={type}
-                className={clsx(s.field__input)}
+                className={clsx(s.field__input, !valid && s.invalid)}
                 autoComplete="off"
                 placeholder=" "
+                value={value}
+                onInput={onInputChange}
             />
             <label
                 htmlFor={id}
