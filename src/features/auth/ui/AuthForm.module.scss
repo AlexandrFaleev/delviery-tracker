@@ -5,7 +5,9 @@
   flex-direction: column;
   width: 100%;
   max-width: 674px;
-  padding: 90px 67px 41px 67px;
+  padding: 0 67px;
+  padding-top: fluid(70, 40);
+  padding-bottom: fluid(41, 30);
   background-color: $white;
   border-radius: 20px;
   margin-top: fluid(50, 20);
@@ -45,5 +47,11 @@
 
   &:visited {
     color: $light-violet;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .auth-form {
+    padding: 90px 67px 41px 67px;
   }
 }

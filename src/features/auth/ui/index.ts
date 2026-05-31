@@ -1,1 +1,1 @@
-export {AuthButton} from './AuthButton'
+export {default as AuthForm} from './AuthForm';
