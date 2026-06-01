@@ -1,0 +1,152 @@
+@use "@styles" as *;
+
+.link {
+  text-decoration: none;
+  color: black;
+
+  &:visited {
+    color: black;
+  }
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 199px 155px 172px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  padding: 16px 33px;
+  border-radius: 20px;
+  height: 106px;
+  cursor: pointer;
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    @include font-secondary(500);
+    font-size: rem(18);
+    color: $light-light-gray;
+    background-color: $dark-white;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    margin: 0 auto;
+    min-width: 70px;
+    color: black;
+
+    &.cdek {
+      width: 136px;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+    margin-left: auto;
+  }
+
+  &__status-title {
+    @include font-secondary(500);
+
+    font-size: rem(16);
+    color: $light-light-gray;
+  }
+}
+
+.status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: auto;
+
+  &.delivering {
+    background-color: $light-green;
+    padding: 10px 8px;
+    color: black;
+  }
+
+  &.inProcessing {
+    background-color: $light-yellow;
+    padding: 8px 4px 8px 12px;
+    color: black;
+  }
+
+  &.delivered {
+    background-color: $dark-green;
+    padding: 10px;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .order-item {
+    grid-template-columns: 146px 77px 62px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 23px 7px 12px;
+    max-height: 58px;
+
+    &__number {
+      padding: 5px 10px;
+      font-size: rem(14);
+    }
+
+    &__img {
+      margin: 0 auto;
+      min-width: 44px;
+      max-height: 44px;
+      color: black;
+
+      &.cdek {
+        width: 136px;
+      }
+    }
+
+    &__status {
+      display: flex;
+      flex-direction: column-reverse;
+      column-gap: 0;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    &__status-title {
+      @include font-secondary(500);
+
+      font-size: rem(10);
+      color: $light-light-gray;
+    }
+  }
+
+  .status-icon {
+    width: 35px;
+    height: 35px;
+
+    &.delivering {
+      display: block;
+      padding: 4px;
+      color: black;
+    }
+
+    &.inProcessing {
+      padding: 5px 2.5px 5px 7.5px;
+      color: black;
+    }
+
+    &.delivered {
+      padding: 6px;
+      color: black;
+    }
+  }
+}

@@ -61,3 +61,48 @@
     margin-top: 12px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .filters {
+    padding: 25px 15px;
+  }
+
+  .search-block {
+
+    column-gap: 10px;
+
+    &__field {
+      height: 50px;
+
+      input {
+        height: 50px;
+      }
+    }
+
+    &__button {
+      max-width: 115px;
+      max-height: 50px;
+      font-size: rem(18);
+      padding: 12px 19px;
+      border-radius: 5px;
+    }
+  }
+
+  .divider {
+    width: 325px;
+  }
+
+  .filters-block {
+    margin-top: 16px;
+    margin-left: 0;
+
+    &__header {
+      font-size: rem(12);
+    }
+
+    &__filters {
+      max-width: 323px;
+      margin-top: 14px;
+    }
+  }
+}

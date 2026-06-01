@@ -1,4 +1,4 @@
-import {AuthPage, HomePage, ProfilePage, UiKit} from "@/pages";
+import {AuthPage, HomePage, OrderPage, ProfilePage, UiKit} from "@/pages";
 import ProtectedRoute from "@/app/routes/ProtectedRoute.tsx";
 
 export const routes = [
@@ -17,5 +17,9 @@ export const routes = [
     {
         path: '/profile',
         element: <ProtectedRoute><ProfilePage/></ProtectedRoute>
+    },
+    {
+        path: '/order/:id',
+        element: <ProtectedRoute><OrderPage/></ProtectedRoute>
     }
 ]

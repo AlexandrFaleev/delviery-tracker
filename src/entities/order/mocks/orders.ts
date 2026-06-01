@@ -11,7 +11,7 @@ export const MOCK_ORDERS: Order[] = [
     },
     {
         id: '312242-oz',
-        trackNumber: 'LA094212783SE',
+        trackNumber: 'URA00123456ZPRU',
         platform: 'ozon',
         status: 'delivering',
         waitingDate: '06.06.2026',
@@ -19,9 +19,9 @@ export const MOCK_ORDERS: Order[] = [
     },
     {
         id: '54321-cd',
-        trackNumber: 'LA094212783SE',
+        trackNumber: 'CDE123456789',
         platform: 'cdek',
         status: 'delivered',
         userId: 'd121d23d2-21dddhg12-bgbhj211'
-    },
+    }
 ]
