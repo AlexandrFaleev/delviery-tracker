@@ -1,10 +1,11 @@
 import {AuthPage, HomePage, OrderPage, ProfilePage, UiKit} from "@/pages";
 import ProtectedRoute from "@/app/routes/ProtectedRoute.tsx";
+import {OrdersProvider} from "@/entities/order";
 
 export const routes = [
     {
         path: '/',
-        element: <ProtectedRoute><HomePage/></ProtectedRoute>
+        element: <ProtectedRoute><OrdersProvider><HomePage/></OrdersProvider></ProtectedRoute>
     },
     {
         path: '/login',
@@ -16,10 +17,10 @@ export const routes = [
     },
     {
         path: '/profile',
-        element: <ProtectedRoute><ProfilePage/></ProtectedRoute>
+        element: <ProtectedRoute><OrdersProvider><ProfilePage/></OrdersProvider></ProtectedRoute>
     },
     {
         path: '/order/:id',
-        element: <ProtectedRoute><OrderPage/></ProtectedRoute>
+        element: <ProtectedRoute><OrdersProvider><OrderPage/></OrdersProvider></ProtectedRoute>
     }
 ]
