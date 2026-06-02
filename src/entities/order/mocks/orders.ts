@@ -22,6 +22,7 @@ export const MOCK_ORDERS: Order[] = [
         trackNumber: 'CDE123456789',
         platform: 'cdek',
         status: 'delivered',
-        userId: 'd121d23d2-21dddhg12-bgbhj211'
+        waitingDate: '06.06.2026',
+        userId: 'd121d23d2-21dddhg12-bgbhj211',
     }
 ]

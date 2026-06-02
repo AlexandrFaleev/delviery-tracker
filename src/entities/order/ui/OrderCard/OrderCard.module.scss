@@ -1,0 +1,250 @@
+@use "@styles" as *;
+
+.order-card {
+  background-color: $white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 865px;
+  padding: 29px 38px 29px 33px;
+  margin: 0 auto;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 199px 155px 172px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__number {
+    @include font-secondary(500);
+    font-size: rem(18);
+    line-height: 1em;
+    color: $light-light-gray;
+    background-color: $dark-white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  &__img {
+    $minWidth: 70px;
+    display: block;
+    min-width: 70px;
+    margin: 0 auto;
+
+    &.cdek {
+      width: 135px;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    column-gap: 21px;
+    margin-left: auto;
+
+    span {
+      @include font-secondary(500);
+      color: $light-light-gray;
+      font-size: rem(16);
+    }
+
+    .inProcessing {
+      background-color: $light-yellow;
+      width: 50px;
+      height: 50px;
+      padding: 8px 4px 8px 12px;
+      border-radius: 10px;
+    }
+
+    .delivering {
+      background-color: $light-green;
+      width: 50px;
+      height: 50px;
+      padding: 10px 8px;
+      border-radius: 10px;
+    }
+
+    .delivered {
+      background-color: $dark-green;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.order-card__info {
+  width: 100%;
+  margin-top: 21px;
+  border-top: 2px solid $max-light-gray;
+  padding-top: 41px;
+  padding-left: 104px;
+}
+
+.statuses__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.statuses__item {
+  display: flex;
+  align-items: center;
+  column-gap: 39px;
+  $icon-width: 60px;
+  $dashed-line-height: 36px;
+
+  span {
+    @include font-secondary(500);
+    font-size: rem(20);
+    color: $light-light-gray;
+  }
+
+  &:not(:nth-child(1)) {
+    position: relative;
+    margin-top: $dashed-line-height + 2px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: $dashed-line-height;
+      border-left: 1px dashed $light-light-gray;
+      top: -1 * $dashed-line-height - 2px;
+      left: 0;
+      margin-left: calc($icon-width / 2);
+    }
+  }
+
+  &-icon {
+    width: $icon-width;
+    height: $icon-width;
+    background-color: $inactive-icon-gray;
+    border-radius: 20px;
+  }
+
+  .inProcessing-icon {
+      padding: 10px 5px 10px 10px;
+
+      &.active {
+        background-color: $light-yellow;
+      }
+  }
+
+  .delivering-icon {
+    padding: 12px 10px;
+
+    &.active {
+      background-color: $light-green;
+    }
+  }
+
+  .delivered-icon {
+    padding: 11px;
+
+    &.active {
+      background-color: $dark-green;
+    }
+  }
+}
+
+.info__date {
+  @include font-secondary(500);
+  font-size: rem(16);
+  text-align: right;
+  color: $light-light-gray;
+}
+
+@media screen and (max-width: 767px) {
+  .order-card {
+
+    max-width: 355px;
+    padding: 28px 15px 22px 15px;
+
+    &__header {
+      display: grid;
+      grid-template-columns: 146px 77px 62px;
+    }
+
+    &__number {
+      font-size: rem(14);
+      padding: 5px 10px;
+    }
+
+    &__img {
+      min-width: 44px;
+    }
+
+    &__status {
+      flex-direction: column-reverse;
+      align-items: center;
+      column-gap: 0;
+      row-gap: 2px;
+
+      span {
+        font-size: rem(10);
+      }
+
+      .inProcessing {
+        background-color: $light-yellow;
+        width: 30px;
+        height: 30px;
+        padding: 5px 2.5px 5px 7.5px;
+      }
+    }
+  }
+
+  .order-card__info {
+    padding-top: 32px;
+    padding-left: 43px;
+  }
+
+  .statuses__item {
+    column-gap: 55px;
+    $icon-width: 53px;
+
+    span {
+      font-size: rem(18);
+    }
+
+    &:not(:nth-child(1)) {
+      position: relative;
+
+      &::before {
+        margin-left: calc($icon-width / 2);
+      }
+    }
+
+    &-icon {
+      width: $icon-width;
+      height: $icon-width;
+      background-color: $inactive-icon-gray;
+      border-radius: 20px;
+    }
+
+    .inProcessing-icon {
+      padding: 9px 4px 9px 12px;
+    }
+
+    .delivering-icon {
+      padding: 8px;
+    }
+
+    .delivered-icon {
+      padding: 7px;
+    }
+  }
+
+  .info__date {
+    font-size: rem(14);
+    text-align: left;
+    margin-top: 36px;
+
+    span {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+

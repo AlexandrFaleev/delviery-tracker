@@ -32,6 +32,10 @@
   &:visited{
     color: $light-gray;
   }
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
 .user-info {

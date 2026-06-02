@@ -21,7 +21,7 @@ const UserCard = ({user}:UserCardProps):React.JSX.Element => {
                 <IconPencil/>
             </Button>
             <img
-                src={user.avatar ?? "src/shared/assets/avatar.png"}
+                src={user.avatar ?? "../src/shared/assets/avatar.png"}
                 loading="lazy"
                 alt="Аватар"
                 className={s[`user-avatar`]}

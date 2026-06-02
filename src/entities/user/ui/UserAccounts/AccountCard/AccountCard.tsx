@@ -18,7 +18,7 @@ const AccountCard = ({
             className={s[`account-card`]}
         >
             <img
-                src={`src/shared/assets/${platform}.png`}
+                src={`../src/shared/assets/${platform}.png`}
                 alt={platform}
                 className={s['account-card__image']}
             />

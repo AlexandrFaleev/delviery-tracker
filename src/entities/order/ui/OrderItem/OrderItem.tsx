@@ -28,7 +28,7 @@ const OrderItem = ({
                     {trackNumber}
                 </p>
                 <img
-                    src={`src/shared/assets/${platform}.png`}
+                    src={`../src/shared/assets/${platform}.png`}
                     alt={platform}
                     className={clsx(s[`order-item__img`], s[platform])}
                 />
