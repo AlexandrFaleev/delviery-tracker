@@ -3,9 +3,9 @@ import type {User} from "@/entities/user/model/types.ts";
 import {MOCK_USERS} from "@/entities/user/mocks/users.ts";
 
 interface UserContextType {
-    user: User;
+    user: User | null;
     setUser: (user: User) => void;
-    deleteAccount: (id: number) => void;
+    deleteAccount: (id: string) => void;
 }
 
 export const UserContext = React.createContext<UserContextType>({} as UserContextType);
@@ -21,16 +21,21 @@ const UserProvider = ({ children }:React.PropsWithChildren) => {
         }
     }
 
-    const deleteAccount = (id:number) => {
-        const newUserAccounts =  user?.accounts.filter(account => account.id !== id);
-        setUser({...user, accounts: newUserAccounts});
+    const deleteAccount = (id:string) => {
+        if(!user){
+            return;
+        }
+        const newUserAccounts = user?.accounts.filter(
+            account => account?.id !== id
+        );
+        setUser({...user, accounts: newUserAccounts})
     }
 
     return(
         <UserContext.Provider value={{
             user,
             setUser,
-            deleteAccount
+            deleteAccount,
         }}>
             {children}
         </UserContext.Provider>

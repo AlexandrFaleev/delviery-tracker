@@ -6,7 +6,7 @@ import s from './UserCard.module.scss'
 import type {User} from "@/entities/user/model/types.ts";
 
 type UserCardProps = {
-    user: User;
+    user: User | null;
 }
 
 const UserCard = ({user}:UserCardProps):React.JSX.Element => {
@@ -21,7 +21,7 @@ const UserCard = ({user}:UserCardProps):React.JSX.Element => {
                 <IconPencil/>
             </Button>
             <img
-                src={user.avatar ?? "../src/shared/assets/avatar.png"}
+                src={user?.avatar ?? "../../../public/avatar.png"}
                 loading="lazy"
                 alt="Аватар"
                 className={s[`user-avatar`]}

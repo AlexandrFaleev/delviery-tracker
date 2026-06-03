@@ -15,6 +15,7 @@ const UserAccounts = ({
     className,
 }: UserAccountProps): ReactElement => {
 
+
     return (
         <div className={clsx(s.accounts, className)}>
             <div className={s[`user-accounts__header`]}>
@@ -31,12 +32,12 @@ const UserAccounts = ({
                 </Button>
             </div>
             <ul className={s.accounts__list}>
-                {accounts?.map((account:UserAccount) => (
+                {accounts?.map(({id, phoneNumber, platform}: UserAccount) => (
                     <AccountCard
-                        platform={account.platform}
-                        phoneNumber={account.phoneNumber}
-                        id={account.id}
-                        key={account.id}
+                        platform={platform}
+                        phoneNumber={phoneNumber}
+                        id={id}
+                        key={id} type={""} props={undefined}
                     />
                 ))}
             </ul>

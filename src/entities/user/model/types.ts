@@ -1,5 +1,5 @@
 export interface UserAccount {
-    id: number;
+    id: string;
     platform: string;
     phoneNumber: string;
 }

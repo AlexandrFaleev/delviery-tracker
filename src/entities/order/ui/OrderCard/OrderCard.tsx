@@ -21,7 +21,7 @@ const OrderCard = ({
                     {order?.trackNumber}
                 </div>
                 <img
-                    src={`../src/shared/assets/${order?.platform}.png`}
+                    src={`../../../public/${order?.platform}.png`}
                     alt={order?.platform}
                     className={clsx(s[`order-card__img`], s[`${order?.platform}`])}
                 />

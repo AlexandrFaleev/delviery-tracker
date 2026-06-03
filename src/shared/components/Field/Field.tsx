@@ -9,7 +9,7 @@ type FieldProps = {
     valid:boolean
     className?:string,
     value:string,
-    onInputChange: (value:string) => void,
+    onInputChange: ({target}:any) => void,
 }
 
 const Field = ({

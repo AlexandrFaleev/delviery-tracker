@@ -25,7 +25,7 @@ const HomePage = (): React.JSX.Element => {
                         />
                         {deviceType !== 'mobile' && (
                             <img
-                                src="../src/shared/assets/box-image.png"
+                                src="../../../public/box-image.png"
                                 alt="Коробка"
                                 loading="lazy"
                                 className={s[`orders__filters-img`]}

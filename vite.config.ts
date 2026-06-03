@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/delviery-tracker/',
   plugins: [react(), vitePluginSvgr()],
   resolve: {
     alias: {
@@ -13,5 +14,7 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, './src/shared/styles'),
       "@pages": path.resolve(__dirname, './src/pages'),
     }
-  }
+  },
+  publicDir: 'public',
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.svg'],
 })

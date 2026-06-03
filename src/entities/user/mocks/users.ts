@@ -12,17 +12,17 @@ export const MOCK_USERS:User[] =  [
         token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBdXRoIFNlcnZlciIsInN1YiI6ImF1dGgiLCJleHAiOjE1MDU0Njc3NTY4NjksImlhdCI6MTUwNTQ2NzE1MjA2OSwidXNlciI6MX0.9VPGwNXYfXnNFWH3VsKwhFJ0MazwmNvjSSRZ1vfZUU',
         accounts: [
             {
-                id: 1,
+                id: '1',
                 platform: 'wildberries',
                 phoneNumber: '+7(917)533-08-48'
             },
             {
-                id: 2,
+                id: '2',
                 platform: 'ozon',
                 phoneNumber: '+7(917)533-08-48'
             },
             {
-                id: 3,
+                id: '3',
                 platform: 'cdek',
                 phoneNumber: '+7(917)533-08-48'
             }

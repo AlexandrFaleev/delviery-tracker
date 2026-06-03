@@ -24,7 +24,7 @@ const ProfilePage = (): React.JSX.Element => {
                 <section className={s[`user-info`]}>
                     <UserCard user={user} />
                     <UserAccounts
-                        accounts={user.accounts}
+                        accounts={user?.accounts}
                         className={s[`user-accounts`]}
                     />
                 </section>

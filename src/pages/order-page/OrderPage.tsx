@@ -8,7 +8,7 @@ import s from './OrderPage.module.scss';
 
 const OrderPage = () => {
     const {id} = useParams();
-    const {userOrders} = useContext(OrdersContext);
+    const {userOrders, deleteOrder} = useContext(OrdersContext);
     const currentOrder = userOrders?.find(order => order.id === id)
 
     return (
@@ -21,7 +21,10 @@ const OrderPage = () => {
                     <h1 className={s.header__title}>
                         Заказ<br/>{currentOrder?.trackNumber}
                     </h1>
-                    <button className={s[`header__delete-button`]}>
+                    <button
+                        className={s[`header__delete-button`]}
+                        onClick={() => {deleteOrder(id)}}
+                    >
                         Удалить
                     </button>
                 </section>

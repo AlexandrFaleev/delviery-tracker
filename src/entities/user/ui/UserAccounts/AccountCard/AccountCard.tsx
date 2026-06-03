@@ -2,9 +2,9 @@ import {type ReactElement, useContext} from "react";
 import type {UserAccount} from "@/entities/user/model/types.ts";
 import CorrectionIcon from '@shared/assets/icons/icon-pencil.svg?react';
 import TrashIcon from '@shared/assets/icons/icon-trash.svg?react';
-import s from './AccountCard.module.scss'
 import {Button} from "@shared/components";
 import {UserContext} from "@/entities/user";
+import s from './AccountCard.module.scss'
 
 const AccountCard = ({
      platform,
@@ -18,7 +18,7 @@ const AccountCard = ({
             className={s[`account-card`]}
         >
             <img
-                src={`../src/shared/assets/${platform}.png`}
+                src={`../../../public/${platform}.png`}
                 alt={platform}
                 className={s['account-card__image']}
             />
